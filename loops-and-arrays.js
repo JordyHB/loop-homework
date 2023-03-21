@@ -12,8 +12,13 @@ const names = ["Henk", "Piet", "Fred", "Joop"];
 // Na jouw script zie je de aangepaste waardes:
 // console.log(names) geeft: ["Henkje", "Pietje", "Fredje", "Joopje"]
 
+// loops through names array
+for (let i = 0; i < names.length; i++) {
+    names[i] = names[i] + 'je'
+}
 
-
+// names after script succesfully ran
+console.log(names)
 
 
 // ==========================================
@@ -30,7 +35,21 @@ const numbers = [2, 4, 5, 29, 38];
 // Na jouw script zie je de aangepaste waardes:
 // console.log(numbers) geeft: [ 4, 8, 15, 87, 76 ];
 
+// loops through numbers array
+for (let i = 0; i < numbers.length; i++) {
+    // checks if number is even by seeing if 0 is left after dividing by 2
+    if (numbers[i] % 2 === 0) {
+        // multiplies the array item times 2 if even
+        numbers[i] = numbers[i] * 2
+    }
+    // multiplies the array item times 3 if uneven
+    else {
+        numbers[i] = numbers[i] * 3
+    }
+}
 
+// show the script ran succesfully
+console.log(numbers)
 
 
 
@@ -57,5 +76,13 @@ const squares = [30, 2, 8, 24, 11];
 //   'Het volume van 11 is 1331'
 // ]
 
+// loops through the squares array
+for (let i = 0; i < squares.length; i++) {
+    // this squares the called upon array item and stores it in a variable
+    let volume = squares[i] ** 3
+    // updates the array entry with the added data
+    squares[i] = 'Het volume van ' + squares[i] + ' is ' + volume
+}
 
+console.log(squares)
 
