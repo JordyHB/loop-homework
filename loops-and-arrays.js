@@ -84,5 +84,6 @@ for (let i = 0; i < squares.length; i++) {
     squares[i] = 'Het volume van ' + squares[i] + ' is ' + volume
 }
 
+// show the script ran succesfully
 console.log(squares)
 
