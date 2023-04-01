@@ -16,7 +16,13 @@ const scores = [
 // 66ç
 // ==========================================
 
+// function to easily run the loop again for task 1b
 
+// loops for the length of scores
+for (let i = 0; i < scores.length; i++) {
+    // loops through the list grabbing the score of each dict inside
+    console.log(scores[i].score)
+}
 
 
 
@@ -32,7 +38,32 @@ const scores = [
 // D
 // ==========================================
 
-
+// alternative way of looping that where student gets assigned each item in scores once during looping
+for (let student in scores) {
+    // runs code under switch case if true
+    switch (true) {
+        // checks the score and updates the objects grade
+        case (scores[student].score < 60):
+            scores[student].grade = 'F'
+            break
+        // checks the score and updates the objects grade
+        case (scores[student].score < 70):
+            scores[student].grade = 'D'
+            break
+        // checks the score and updates the objects grade
+        case (scores[student].score < 80):
+            scores[student].grade = 'C'
+            break
+        // checks the score and updates the objects grade
+        case (scores[student].score < 90):
+            scores[student].grade = 'B'
+            break
+        // checks the score and updates the objects grade
+        case (scores[student].score < 100):
+            scores[student].grade = 'A'
+            break
+    }
+}
 
 
 
@@ -50,7 +81,8 @@ const scores = [
 // ==========================================
 
 
-
+// Oeps per ongeluk al in 1b gedaan
+console.log(scores)
 
 
 // ==========================================
@@ -75,16 +107,22 @@ const NOVIEmployees = [
 //  ];
 // ==========================================
 
+// yet another way of looping looks at each entry in the array and assigns it the variable person
+NOVIEmployees.forEach((person)=> {
+    // sets the email for person(object with the info) ny combining the lowercases of the names
+    person.email =
+        `${person.firstName.toLowerCase()}.${person.lastName.toLowerCase()}@novi.nl`
+})
 
-
-
+// shows results
+console.log(NOVIEmployees)
 
 
 // Opdracht 2-BONUS
 // Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
 // ==========================================
 
-
+// gedaan ^
 
 
 // ==========================================
@@ -133,3 +171,40 @@ const students = [
 
 
 
+// loops through students storing the info of each item in studentinfo
+students.forEach((studentInfo) => {
+    // checks the zipcode to set
+    switch (studentInfo.zipCode) {
+        // checks the zipcode and updates the neighbourhood
+        case studentInfo.zipCode = '3513':
+            studentInfo.neighborhood = 'Pijlsweerd'
+            console.log('piemel')
+            break
+        // checks the zipcode and updates the neighbourhood
+        case studentInfo.zipCode = '3514':
+            studentInfo.neighborhood = 'Vogelenbuurt'
+            break
+        // checks the zipcode and updates the neighbourhood
+        case studentInfo.zipCode = '3512':
+            studentInfo.neighborhood = 'Binnenstad'
+            break
+        // checks the zipcode and updates the neighbourhood
+        case studentInfo.zipCode = '3531':
+            studentInfo.neighborhood = 'Lombok'
+            break
+        // checks the zipcode and updates the neighbourhood
+        case studentInfo.zipCode = '3572':
+            studentInfo.neighborhood = 'Wittevrouwen'
+            break
+        // checks the zipcode and updates the neighbourhood
+        case studentInfo.zipCode = '3581':
+            studentInfo.neighborhood = 'Oudwijk'
+            break
+        // checks the zipcode and updates the neighbourhood
+        case studentInfo.zipCode = '3583':
+            studentInfo.neighborhood = 'Schildersbuurt'
+            break
+        }
+    })
+
+console.log(students)

@@ -11,7 +11,10 @@
 // Dit heb je nog niet geleerd, maar bekijk hiervoor dit MDN-artikel eens: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
 // ==========================================
 
-
+// loops through increasing i and therefore the number of repeats by 1 each loop
+for (let i = 1; i <= 5; i++ ) {
+    console.log('*'.repeat(i))
+}
 
 
 
@@ -25,7 +28,14 @@
 // klaar!
 // ==========================================
 
-
+for (let i = 0; i < 5; i++) {
+    if (i < 4) {
+        console.log('loop...')
+    }
+    else {
+        console.log('klaar!')
+    }
+}
 
 
 
@@ -45,7 +55,21 @@
 // >> 9
 // ==========================================
 
+for (let i = 1; i <= 9; i++) {
+    // if i is bigger than 5 it adds 2 arrows.
+    if (i > 5) {
+        console.log('>> ' + i)
+    }
+    // checks to see if its bigger than 2 before adding arrows this is second so any numbers bigger than 5 get >>.
+    else if (i > 2) {
+        console.log('> ' + i)
+    }
 
+    else {
+        // transforms the number to a string to make it have the entire loop log strings
+        console.log(i.toString())
+    }
+}
 
 
 
@@ -87,5 +111,27 @@
 // etc.
 // ==========================================
 
+for (let i = 1; i <= 100; i++) {
 
+    if ((i % 3 === 0) && (i % 5 === 0)) {
+        console.log('FizzBuzz')
+    }
+
+
+        // checks if divisable by 3
+    else if (i % 3 === 0) {
+            console.log('Fizz')
+        }
+
+    // checks if divisable by 5
+    else if (i % 5 === 0) {
+            console.log('Buzz')
+        }
+
+    // if not print i
+    else {
+        // converts i to string for visual reasons
+            console.log(i.toString())
+        }
+}
 
