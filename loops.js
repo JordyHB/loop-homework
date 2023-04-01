@@ -30,7 +30,7 @@ for (let i = 1; i <= 5; i++ ) {
 
 for (let i = 0; i < 5; i++) {
     if (i < 4) {
-        console.log('loop')
+        console.log('loop...')
     }
     else {
         console.log('klaar!')
@@ -114,7 +114,7 @@ for (let i = 1; i <= 9; i++) {
 for (let i = 1; i <= 100; i++) {
 
     if ((i % 3 === 0) && (i % 5 === 0)) {
-        console.log('Fizz' + 'Buzz')
+        console.log('FizzBuzz')
     }
 
 
